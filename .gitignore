@@ -142,13 +142,15 @@ Desktop.ini
 # System Test related files
 tests/codeception/acceptance.suite.yml
 tests/codeception/_support/_generated/*TesterActions.php
-tests/codeception/joomla-cms3*
+tests/codeception/cache
+tests/codeception/joomla
 tests/codeception/_output*
 selenium-server-standalone.jar
 selenium.log
 tests/codeception/cache
 tests/codeception/_output
 tests/codeception/vendor
+tests/codeception/JoomlaTesting.ini
 composer.phar
 
 # Build related
