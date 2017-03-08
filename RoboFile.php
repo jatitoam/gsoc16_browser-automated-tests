@@ -51,7 +51,7 @@ final class RoboFile extends RoboFileBase
 	 *
 	 * @return  void
 	 *
-	 * @since   3.7.0
+	 * @since   __DEPLOY_VERSION__
 	 */
 	public function checkCodestyle($sniffersPath = null)
 	{
@@ -89,7 +89,7 @@ final class RoboFile extends RoboFileBase
 	/**
 	 * Creates a testing Joomla site for running the tests (use it before run:test)
 	 *
-	 * @param   bool    $useHtaccess (1/0)       Rename and enable embedded Joomla .htaccess file
+	 * @param   bool    $useHtaccess             (1/0) Rename and enable embedded Joomla .htaccess file
 	 * @param   string  $appendCertificatesPath  Path to add extra certificates to the Joomla pem file
 	 *
 	 * @since   __DEPLOY_VERSION__
@@ -116,7 +116,7 @@ final class RoboFile extends RoboFileBase
 
 		$this->build();
 
-		$exclude = ['tests', 'tests-phpunit', '.run', '.github', '.git'];
+		$exclude = array('tests', 'tests-phpunit', '.run', '.github', '.git');
 
 		$this->copyJoomla($this->configuration->getCmsPath(), $exclude);
 
@@ -131,7 +131,9 @@ final class RoboFile extends RoboFileBase
 		{
 			$this->say("Renaming htaccess.txt to .htaccess");
 			$this->_copy('./htaccess.txt', $this->configuration->getCmsPath() . '/.htaccess');
-			$this->_exec('sed -e "s,# RewriteBase /,RewriteBase /tests/codeception/joomla-cms3/,g" -in-place tests/codeception/joomla-cms3/.htaccess');
+			$this->_exec(
+				'sed -e "s,# RewriteBase /,RewriteBase /tests/codeception/joomla-cms3/,g" -in-place tests/codeception/joomla-cms3/.htaccess'
+			);
 		}
 	}
 
@@ -196,7 +198,7 @@ final class RoboFile extends RoboFileBase
 	 *
 	 * @return void
 	 *
-	 * @since   3.7.0
+	 * @since   __DEPLOY_VERSION__
 	 */
 	public function runTestSuites(
 		$opts = array(
@@ -268,7 +270,7 @@ final class RoboFile extends RoboFileBase
 	 *
 	 * @return  void
 	 *
-	 * @since   3.7.0
+	 * @since   __DEPLOY_VERSION__
 	 */
 	public function prepareTestingPackage($params = array('dev' => false))
 	{
@@ -359,9 +361,11 @@ final class RoboFile extends RoboFileBase
 	/**
 	 * Get the suite configuration
 	 *
-	 * @param string $suite
+	 * @param   string  $suite  Suite
 	 *
-	 * @return array
+	 * @return  array
+	 *
+	 * @since   __DEPLOY_VERSION__
 	 */
 	private function getSuiteConfig($suite = 'acceptance')
 	{
@@ -373,6 +377,13 @@ final class RoboFile extends RoboFileBase
 		return $this->suiteConfig;
 	}
 
+	/**
+	 * Create the database
+	 *
+	 * @return  void
+	 *
+	 * @since   __DEPLOY_VERSION__
+	 */
 	private function createDatabase()
 	{
 		$suiteConfig = $this->getSuiteConfig();
@@ -384,6 +395,7 @@ final class RoboFile extends RoboFileBase
 
 		// Create connection
 		$connection = new mysqli($host, $user, $pass);
+
 		// Check connection
 		if ($connection->connect_error)
 		{
