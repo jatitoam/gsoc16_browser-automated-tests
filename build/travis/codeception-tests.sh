@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Codeception system tests setup
 
 set -e
@@ -9,8 +9,8 @@ cd $BASE
 sudo apt-get update -qq
 sudo apt-get install -y --force-yes apache2 libapache2-mod-fastcgi > /dev/null
 sudo mkdir $BASE/.run
-chmod a+x $BASE/build/travis/apache2/travis-php-fpm.sh
-sudo $BASE/build/travis/apache2/travis-php-fpm.sh $USER $(phpenv version-name)
+chmod a+x $BASE/build/travis/apache2/codeception-tests-adjustments.sh
+sudo $BASE/build/travis/apache2/codeception-tests-adjustments.sh $USER $(phpenv version-name)
 
 sudo a2enmod rewrite actions fastcgi alias
 echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
