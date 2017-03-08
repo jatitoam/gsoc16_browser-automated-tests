@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Codeception system tests setup
 
 set -e
