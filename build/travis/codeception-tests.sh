@@ -15,7 +15,7 @@ sudo $BASE/build/travis/codeception-tests-adjustments.sh $USER $(phpenv version-
 sudo a2enmod rewrite actions fastcgi alias
 echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
-sudo cp -f $BASE/travis/apache2/php-apache-codeception /etc/apache2/sites-available/default
+sudo cp -f $BASE/build/travis/apache2/php-apache-codeception /etc/apache2/sites-available/default
 sudo sed -e "s?%TRAVIS_BUILD_DIR%?$BASE?g" --in-place /etc/apache2/sites-available/default
 sudo sed -e "s?%PHPVERSION%?${TRAVIS_PHP_VERSION:0:1}?g" --in-place /etc/apache2/sites-available/default
 git submodule update --init --recursive
