@@ -413,4 +413,20 @@ final class RoboFile extends RoboFileBase
 			$this->yell("Error creating database: " . $connection->error);
 		}
 	}
+
+	/**
+	 * Runs Selenium Standalone Server.
+	 *
+	 * @param   bool  $debugMode  Sets the debug mode
+	 *
+	 * @return void
+	 *
+	 * @since  __DEPLOY_VERSION__
+	 */
+	public function runSelenium($debugMode = false)
+	{
+		$this->configuration->setSeleniumWebDriver($this->getWebdriver());
+
+		parent::runSelenium($debugMode);
+	}
 }
