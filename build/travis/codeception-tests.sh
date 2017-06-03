@@ -22,10 +22,12 @@ git submodule update --init --recursive
 sudo service apache2 restart
 
 # Xvfb
-sudo bash /etc/init.d/xvfb start
-sleep 1 # give xvfb some time to start
+export DISPLAY=:99.0
+sh -e /etc/init.d/xvfb start
+sleep 3 # give xvfb some time to start
 
 # Fluxbox
+sudo apt-get install fluxbox -y --force-yes
 fluxbox &
 sleep 3 # give fluxbox some time to start
 
