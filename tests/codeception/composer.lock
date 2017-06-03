@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "61a0460167337277bed923be83073cda",
+    "content-hash": "dd323c1d70ca86a1a7d5c5826ef71207",
     "packages": [],
     "packages-dev": [
         {
@@ -1133,16 +1133,16 @@
         },
         {
             "name": "joomla-projects/joomla-testing-robo",
-            "version": "dev-container-test",
+            "version": "dev-container-test-debug",
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomla-projects/joomla-testing-robo.git",
-                "reference": "72a890182feb4b50734aba21201148254307cdbb"
+                "reference": "82bffedc664d85b2e635e15c1144792bab32d584"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomla-projects/joomla-testing-robo/zipball/72a890182feb4b50734aba21201148254307cdbb",
-                "reference": "72a890182feb4b50734aba21201148254307cdbb",
+                "url": "https://api.github.com/repos/joomla-projects/joomla-testing-robo/zipball/82bffedc664d85b2e635e15c1144792bab32d584",
+                "reference": "82bffedc664d85b2e635e15c1144792bab32d584",
                 "shasum": ""
             },
             "require": {
@@ -1179,7 +1179,7 @@
                 "task",
                 "tests"
             ],
-            "time": "2017-06-03T16:12:48+00:00"
+            "time": "2017-06-03T16:59:28+00:00"
         },
         {
             "name": "joomla-projects/selenium-server-standalone",
