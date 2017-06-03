@@ -1137,12 +1137,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomla-projects/joomla-testing-robo.git",
-                "reference": "82bffedc664d85b2e635e15c1144792bab32d584"
+                "reference": "36f21aaface45f251ba0729102b5cf643ee7e035"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomla-projects/joomla-testing-robo/zipball/82bffedc664d85b2e635e15c1144792bab32d584",
-                "reference": "82bffedc664d85b2e635e15c1144792bab32d584",
+                "url": "https://api.github.com/repos/joomla-projects/joomla-testing-robo/zipball/36f21aaface45f251ba0729102b5cf643ee7e035",
+                "reference": "36f21aaface45f251ba0729102b5cf643ee7e035",
                 "shasum": ""
             },
             "require": {
@@ -1179,7 +1179,7 @@
                 "task",
                 "tests"
             ],
-            "time": "2017-06-03T16:59:28+00:00"
+            "time": "2017-06-03T17:14:02+00:00"
         },
         {
             "name": "joomla-projects/selenium-server-standalone",
