@@ -67,7 +67,7 @@ final class RoboFile extends RoboFileBase
 			->setCodeStyleStandardsFolder($sniffersPath)
 			->setCodeStyleCheckFolders(
 				array(
-					'tests/codeception/joomla-cms3'
+					'tests/codeception/joomla-cms'
 				)
 			)
 			->checkCodeStyle()
@@ -132,7 +132,7 @@ final class RoboFile extends RoboFileBase
 			$this->say("Renaming htaccess.txt to .htaccess");
 			$this->_copy('./htaccess.txt', $this->configuration->getCmsPath() . '/.htaccess');
 			$this->_exec(
-				'sed -e "s,# RewriteBase /,RewriteBase /tests/codeception/joomla-cms3/,g" -in-place tests/codeception/joomla-cms3/.htaccess'
+				'sed -e "s,# RewriteBase /,RewriteBase /tests/codeception/joomla-cms/,g" -in-place tests/codeception/joomla-cms/.htaccess'
 			);
 		}
 	}
@@ -326,6 +326,8 @@ final class RoboFile extends RoboFileBase
 		}
 
 		$driver['path'] = $driverPath;
+
+		$this->say('Webdriver parameter: ' . '-D' . implode('=', $driver));
 
 		return '-D' . implode('=', $driver);
 	}
