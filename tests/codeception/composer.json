@@ -40,7 +40,7 @@
 	"symfony/dependency-injection": "*",
 	"symfony/http-kernel": "*",
 	"symfony/phpunit-bridge": "*",
-	"joomla-projects/joomla-testing-robo": "dev-container-test"
+	"joomla-projects/joomla-testing-robo": "dev-container-test-debug"
   },
   "minimum-stability": "dev",
   "prefer-stable": true
