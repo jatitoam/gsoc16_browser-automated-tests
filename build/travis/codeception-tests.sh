@@ -22,8 +22,7 @@ git submodule update --init --recursive
 sudo service apache2 restart
 
 # Xvfb
-export DISPLAY=:99.0
-sh -e /etc/init.d/xvfb start
+sh -e /etc/init.d/xvfb start :0 -ac -screen 0 1024x768x24 &
 sleep 3 # give xvfb some time to start
 
 # Fluxbox

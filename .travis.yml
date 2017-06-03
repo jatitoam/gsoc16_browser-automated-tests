@@ -11,6 +11,7 @@ env:
     - INSTALL_MEMCACHED="yes"
     - INSTALL_REDIS="yes"
     - RUN_PHPCS="no"
+    - DISPLAY="0.0"
 
 matrix:
   fast_finish: true
