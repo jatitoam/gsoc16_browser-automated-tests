@@ -1088,12 +1088,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomla-projects/joomla-testing.git",
-                "reference": "a24df7c03c7c4c4c117fbb7c22860d534be97103"
+                "reference": "80bec8cc3cbebe5ef19a8a889ae3671bdcb78fe7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomla-projects/joomla-testing/zipball/a24df7c03c7c4c4c117fbb7c22860d534be97103",
-                "reference": "a24df7c03c7c4c4c117fbb7c22860d534be97103",
+                "url": "https://api.github.com/repos/joomla-projects/joomla-testing/zipball/80bec8cc3cbebe5ef19a8a889ae3671bdcb78fe7",
+                "reference": "80bec8cc3cbebe5ef19a8a889ae3671bdcb78fe7",
                 "shasum": ""
             },
             "require": {
@@ -1101,7 +1101,7 @@
             },
             "require-dev": {
                 "consolidation/robo": "~1",
-                "joomla-projects/joomla-testing-robo": "~1",
+                "joomla-projects/joomla-testing-robo": "dev-container-test",
                 "symfony/process": "~3"
             },
             "type": "library",
@@ -1129,7 +1129,7 @@
                 "task",
                 "tests"
             ],
-            "time": "2017-05-03T09:48:36+00:00"
+            "time": "2017-06-03T16:12:21+00:00"
         },
         {
             "name": "joomla-projects/joomla-testing-robo",
@@ -1137,12 +1137,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomla-projects/joomla-testing-robo.git",
-                "reference": "bf9af3b998ff33b4c7e9dad5bfc405216088e71a"
+                "reference": "72a890182feb4b50734aba21201148254307cdbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomla-projects/joomla-testing-robo/zipball/bf9af3b998ff33b4c7e9dad5bfc405216088e71a",
-                "reference": "bf9af3b998ff33b4c7e9dad5bfc405216088e71a",
+                "url": "https://api.github.com/repos/joomla-projects/joomla-testing-robo/zipball/72a890182feb4b50734aba21201148254307cdbb",
+                "reference": "72a890182feb4b50734aba21201148254307cdbb",
                 "shasum": ""
             },
             "require": {
@@ -1179,7 +1179,7 @@
                 "task",
                 "tests"
             ],
-            "time": "2017-03-08T03:09:13+00:00"
+            "time": "2017-06-03T16:12:48+00:00"
         },
         {
             "name": "joomla-projects/selenium-server-standalone",
