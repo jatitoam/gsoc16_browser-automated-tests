@@ -40,7 +40,8 @@
 	"symfony/dependency-injection": "*",
 	"symfony/http-kernel": "*",
 	"symfony/phpunit-bridge": "*",
-	"joomla-projects/joomla-testing-robo": "dev-container-test-debug"
+	"joomla-projects/joomla-testing-robo": "dev-container-test-debug",
+	"enm1989/chromedriver": "^2.29"
   },
   "minimum-stability": "dev",
   "prefer-stable": true
