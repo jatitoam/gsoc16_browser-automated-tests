@@ -15,7 +15,6 @@ sudo $BASE/build/travis/codeception-tests-adjustments.sh $USER $(phpenv version-
 
 # Google Chrome
 sudo apt-get install chromium-chromedriver
-export PATH=$PATH:/usr/lib/chromium-browser/
 
 # Apache setup
 sudo a2enmod rewrite actions fastcgi alias
