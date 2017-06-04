@@ -13,6 +13,10 @@ sudo mkdir $BASE/.run
 chmod a+x $BASE/build/travis/codeception-tests-adjustments.sh
 sudo $BASE/build/travis/codeception-tests-adjustments.sh $USER $(phpenv version-name)
 
+# Google Chrome
+sudo apt-get install chromium-chromedriver
+export PATH=$PATH:/usr/lib/chromium-browser/
+
 # Apache setup
 sudo a2enmod rewrite actions fastcgi alias
 echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
