@@ -6,12 +6,20 @@ set -e
 BASE="$1"
 cd $BASE
 
+# Initial setup and fixes
 sudo apt-get update -qq
 sudo apt-get install -y --force-yes apache2 libapache2-mod-fastcgi > /dev/null
 sudo mkdir $BASE/.run
 chmod a+x $BASE/build/travis/codeception-tests-adjustments.sh
 sudo $BASE/build/travis/codeception-tests-adjustments.sh $USER $(phpenv version-name)
 
+# Google Chrome setup
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+
+# Apache setup
 sudo a2enmod rewrite actions fastcgi alias
 echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
@@ -20,6 +28,9 @@ sudo sed -e "s?%TRAVIS_BUILD_DIR%?$BASE?g" --in-place /etc/apache2/sites-availab
 sudo sed -e "s?%PHPVERSION%?${TRAVIS_PHP_VERSION:0:1}?g" --in-place /etc/apache2/sites-available/default
 git submodule update --init --recursive
 sudo service apache2 restart
+
+# Forcing localhost in hosts file
+sudo sed -i '1s/^/127.0.0.1 localhost\n/' /etc/hosts
 
 # Xvfb
 sh -e /etc/init.d/xvfb start :0 -ac -screen 0 1024x768x24 &
