@@ -1,5 +1,11 @@
 # Forces new Travis-CI Infrastructure
+dist: trusty
 sudo: false
+
+addons:
+  apt:
+    packages:
+      - google-chrome-stable
 
 language: php
 
@@ -11,7 +17,6 @@ env:
     - INSTALL_MEMCACHED="yes"
     - INSTALL_REDIS="yes"
     - RUN_PHPCS="no"
-    - DISPLAY="0.0"
 
 matrix:
   fast_finish: true

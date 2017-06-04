@@ -13,12 +13,6 @@ sudo mkdir $BASE/.run
 chmod a+x $BASE/build/travis/codeception-tests-adjustments.sh
 sudo $BASE/build/travis/codeception-tests-adjustments.sh $USER $(phpenv version-name)
 
-# Google Chrome setup
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-get update
-sudo apt-get install google-chrome-stable
-
 # Apache setup
 sudo a2enmod rewrite actions fastcgi alias
 echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
@@ -33,7 +27,8 @@ sudo service apache2 restart
 sudo sed -i '1s/^/127.0.0.1 localhost\n/' /etc/hosts
 
 # Xvfb
-sh -e /etc/init.d/xvfb start :0 -ac -screen 0 1024x768x24 &
+export DISPLAY=:99.0
+sh -e /etc/init.d/xvfb start &
 sleep 3 # give xvfb some time to start
 
 # Fluxbox
