@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c2a9aac2e97978959683a5f676adb69",
+    "content-hash": "dd323c1d70ca86a1a7d5c5826ef71207",
     "packages": [],
     "packages-dev": [
         {
@@ -659,44 +659,6 @@
                 "instantiate"
             ],
             "time": "2015-06-14T21:17:01+00:00"
-        },
-        {
-            "name": "enm1989/chromedriver",
-            "version": "2.29",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ENM1989/chromedriver.git",
-                "reference": "61c748b3e89063ac8901bf092a36c8a8d4afb681"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ENM1989/chromedriver/zipball/61c748b3e89063ac8901bf092a36c8a8d4afb681",
-                "reference": "61c748b3e89063ac8901bf092a36c8a8d4afb681",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/chromedriver"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache License Version 2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Nico Müller",
-                    "email": "nico.mueller.1989@googlemail.com"
-                }
-            ],
-            "description": "Composer distribution of Chromedriver. Adds a executable to your composer bin directory.",
-            "homepage": "https://github.com/ENM1989/chromedriver",
-            "keywords": [
-                "Chromedriver",
-                "chrome",
-                "selenium",
-                "webdriver"
-            ],
-            "time": "2017-04-05T10:16:10+00:00"
         },
         {
             "name": "facebook/webdriver",

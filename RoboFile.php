@@ -427,7 +427,7 @@ final class RoboFile extends RoboFileBase
 	 */
 	public function runSelenium($debugMode = false)
 	{
-		$this->configuration->setSeleniumWebDriver('-Dwebdriver.chrome.driver=tests/codeception/vendor/enm1989/chromedriver/bin/chromedriver');
+		$this->configuration->setSeleniumWebDriver($this->getWebdriver());
 
 		parent::runSelenium($debugMode);
 	}
